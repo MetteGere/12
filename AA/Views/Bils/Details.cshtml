@@ -1,0 +1,67 @@
+﻿@model AA.Models.Bil
+
+@*@model IEnumerable<AA.Models.Bil>*@
+
+
+
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dd class="col-sm-10">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Model)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Argang)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Marke)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Kategori)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                  
+                    <tr>
+                        <td>
+                            @Model.Model
+                        </td>
+                        <td>
+                            @Model.Argang
+                        </td>
+                        <td>
+                            @Model.Marke.Name
+                        </td>
+                        <td>
+                            @Model.Kategori.Name
+                        </td>
+                    </tr>
+                    
+
+                </tbody>
+            </table>
+        </dd>
+    </dl>
+</div>
+
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |*@
+    <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-warning btn-sm">Edit</a>
+    <a asp-action="Index">Back to List</a>
+</div>
